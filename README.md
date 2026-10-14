@@ -120,7 +120,7 @@ The free Render plan sleeps after 15 minutes without traffic; the first request 
 ### 3. Frontend — Vercel
 
 1. **Add New → Project**, import the repo.
-2. Root Directory: `frontend`. Framework preset: Vite (build `npm run build`, output `dist`).
+2. Leave Root Directory at the repository root: the root `vercel.json` builds `frontend/` and serves `frontend/dist` with the SPA rewrite, one-year caching for assets and security headers. (Setting Root Directory to `frontend` also works; `frontend/vercel.json` has the same settings.)
 3. Environment variable: `VITE_API_BASE_URL` = `https://<your-api>.onrender.com/api` (no trailing slash).
 4. Deploy.
 
